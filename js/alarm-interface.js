@@ -6,8 +6,6 @@ var alarmSet;
 
 $(document).ready(function(){
   timeDisplay();
-
-
   $("#alarmTime").submit(function(event){
     event.preventDefault();
     var alarmSet = $('#set-time').val();
