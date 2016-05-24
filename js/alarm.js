@@ -1,10 +1,17 @@
+var timeDisplay = require('./../js/time.js').timeDisplay;
+
+var wakeUp;
+
 exports.Alarm = function(wakeUp){
-  // this.time = moment.format('LTS');
   this.wakeUp = wakeUp;
 }
 
 exports.Alarm.prototype.ring = function() {
-  if (this.time === this.wakeUp) {
-    console.log("wake up");
-  }
+  setInterval(function() {
+    console.log("current time: " + moment().format('H:mm'));
+    console.log("alarm time: " + wakeUp);
+    if (moment().format('H:mm') === this.wakeUp) {
+      alert("Wake Up!");
+    }
+  }, 1000);
 }

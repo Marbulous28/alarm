@@ -3,16 +3,23 @@
   <head>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/moment/min/moment.min.js"></script>
-    <script type="text/javascript" src="wickedpicker.js"></script>
     <script type="text/javascript" src="build/js/app.js"></script>
     <title>Alarm</title>
   </head>
   <body>
-    <div class="timeDisplay">
+    <div id="timeDisplay">
 
     </div>
-    <div class="alarmSet">
-      <input type="text" name="timepicker" class="timepicker"/>
+    <div>
+      <form id="alarmTime">
+        <label for="alarm-time">Alarm set</label>
+        <input type="time" id="set-time" name="alarm-time">
+        <button type="submit">Set alarm</button>
+      </form>
+      <div class="alarmDisplay">
+
+      </div>
+
     </div>
   </body>
 </html>
